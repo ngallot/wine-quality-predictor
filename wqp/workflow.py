@@ -24,7 +24,7 @@ def model_training_workflow(data_path: str):
     logger.info('Starting wine quality predictor training...')
 
     try:
-        logger.info('Fetching data...')
+        logger.info(f'Fetching data @ {data_path}...')
         data = fetch_csv_data(url=data_path, separator=';')
 
         logger.info('Building train and test datasets...')
