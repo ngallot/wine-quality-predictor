@@ -26,6 +26,6 @@ class DataAccessTests(TestCase):
         train_test_sets = build_train_test_sets(data=df, label_col=label_col, train_size=train_size)
         expected_keys = ['train', 'test']
         self.assertSetEqual(set(expected_keys), set(train_test_sets.keys()))
-        expected_train_size = int(train_size * df.shape[0])
+        expected_train_size = int(train_size * 10)
         train_x, train_y = train_test_sets['train']
         self.assertEqual(expected_train_size, train_x.shape[0])
